@@ -29,6 +29,43 @@ func main() {
 	fmt.Println(a)
 	fmt.Println(*a)
 	fmt.Println(x)
+
+	for i := 0; i < 10; i++ { //FOR Loop
+		fmt.Println(i)
+	}
+
+	i := 0
+	for i < 10 { // WHILE Loop
+		fmt.Println(i)
+		i++
+	}
+
+	// for {						  // Infinite Loop
+	// 	fmt.Println("INFINITE LOOP")
+	// }
+
+	z := 5
+
+	for {
+		fmt.Println("Do Stuff", z)
+		z += 3
+		if z > 25 {
+			break
+		}
+	}
+
+	grades := make(map[string]float32)
+	grades["Timmy"] = 42
+	grades["Jay"] = 95
+
+	TimsGrade := grades["Timmy"]
+	fmt.Print(TimsGrade)
+	delete(grades, "Timmy")
+
+	for key, value := range grades {
+		fmt.Print(key, value)
+	}
+
 }
 
 func add(x, y float64) float64 {
